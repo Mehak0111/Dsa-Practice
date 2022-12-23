@@ -54,11 +54,27 @@ int findMiddle(Node* head){
     	cnt++;
 	}
 	return temp->data;
-	
+}
+int findMiddle2(Node* head){
+	if(head==NULL||head->next==NULL)
+	return NULL;
+	if(head->next->next==NULL){
+		return head->next->data;
+	}
+	Node* slow=head;
+	Node* fast=head->next;
+	while(fast!=NULL){
+		fast=fast->next;
+		if(fast!=NULL){
+			fast=fast->next;
+		}
+		slow=slow->next;
+	}
+	return slow->data;
 }
 int main()
 {
 	Node* head=takeinput();
-	int ans=findMiddle(head);
-	cout<<ans;
+	int ans=findMiddle2(head);
+	cout<< ans;
 }
