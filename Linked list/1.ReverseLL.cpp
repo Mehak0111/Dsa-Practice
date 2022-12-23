@@ -65,10 +65,24 @@ Node* reverseLL2(Node* head){
 	reverse(head,curr,prev);
 	return head;
 }
+
+Node* reverse1(Node* head){
+	if(head==NULL||head->next==NULL){
+		return head;
+	}
+	Node* smallHead=reverse1(head->next);
+	head->next->next=head;
+	head->next=NULL;
+	return smallHead;
+}
+Node* reverseLL3(Node* head){
+	reverse1(head);
+}
 int main(){
 	Node *head=takeinput();
 	//head=reverseLL(head);
-	head=reverseLL2(head);
+	//head=reverseLL2(head);
+	head=reverseLL3(head);
 	print(head);
 }
 
