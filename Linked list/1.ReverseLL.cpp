@@ -50,9 +50,25 @@ Node* reverseLL(Node* head){
 	}
 	return prev;
 }
+void reverse(Node* &head,Node* curr,Node* prev){
+	if(curr==NULL){
+		head=prev;
+		return ;
+	}
+	Node* forward=curr->next;
+	reverse(head,forward,curr);
+	curr->next=prev;
+}
+Node* reverseLL2(Node* head){
+	Node* curr=head;
+	Node* prev=NULL;
+	reverse(head,curr,prev);
+	return head;
+}
 int main(){
 	Node *head=takeinput();
-	head=reverseLL(head);
+	//head=reverseLL(head);
+	head=reverseLL2(head);
 	print(head);
 }
 
