@@ -71,7 +71,7 @@ int findMiddle2(Node* head){
 		slow=slow->next;
 	}
 	return slow->data;
-}
+} 
 int main()
 {
 	Node* head=takeinput();
