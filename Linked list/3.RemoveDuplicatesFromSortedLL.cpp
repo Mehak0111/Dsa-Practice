@@ -53,8 +53,24 @@ Node* RemoveDuplicates(Node* head){
 		}
 	}
 }
+Node* deleteDuplicates2(Node* head) {
+        if(head==NULL || head->next==NULL){
+            return head;
+        }
+        Node* curr=head;
+        while(curr->next!=NULL){
+            if(curr->data==curr->next->data){
+                curr->next=curr->next->next;
+            }
+            else{
+                curr=curr->next;
+            }
+        }
+        return head;
+    }
 int main(){
 	Node *head=takeinput();
-	RemoveDuplicates(head);
+	//RemoveDuplicates(head);
+	deleteDuplicates2(head);
 	print(head);
 }
