@@ -34,6 +34,28 @@ void print(Node *head){
 		head=head->next;
 	}
 }
+int RemoveDuplicates(Node* head){
+	if(head==NULL||head->next==NULL){
+		return head->data;
+	}
+	Node* curr=head;
+	while(curr!=NULL && curr->next!=NULL){
+		Node* temp=curr->next;
+		Node* prev=curr;
+		while(temp!=NULL){
+			if(curr->data==temp->data){
+			   prev->next=temp->next;
+			   temp=temp->next;
+			}
+			else{
+				prev=prev->next;
+				temp=temp->next;
+			}
+		}
+		curr=curr->next;
+	}
+	return head->data;
+}
 int mapremoveduplicates(Node * &head){
     if(head == NULL)
         return head->data;
@@ -56,7 +78,7 @@ int mapremoveduplicates(Node * &head){
 int main()
 {
 	Node* head=takeinput();
-	mapremoveduplicates(head);
-	
+	//mapremoveduplicates(head);
+	RemoveDuplicates(head);
 	print(head);
 }
