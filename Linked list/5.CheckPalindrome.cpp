@@ -120,5 +120,6 @@ int main()
 {
   Node* head=takeinput();
   bool ans=isPalindrome(head); //t.c : o(n)   s.c : o(n)
-  cout<<ans;
+  bool ans2=isPalindrome2(head);
+  cout<<ans2;
 }
