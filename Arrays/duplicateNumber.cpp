@@ -9,6 +9,16 @@ int duplicateNumber(vector<int> arr){
 	}
 	return -1;
 }
+int duplicateNumber2(vector<int> arr){
+	int ans=0;
+	for(int i=0;i<arr.size();i++){
+		ans=ans^arr[i];
+	}
+	for(int i=1;i<arr.size();i++){
+		ans=ans^i;
+	}
+	return ans;
+}
 int main(){
 	int n;
 	cin>>n;
@@ -20,5 +30,8 @@ int main(){
     }
     int ans=duplicateNumber(arr);
     cout<<ans;
+    
+    int ans1=duplicateNumber2(arr);
+    cout<<ans1;
 }
 
