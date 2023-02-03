@@ -34,7 +34,7 @@ int main(){
 	}
 	vector<int> ans1=findArrayIntersection(arr1,n1,arr2,n2,ans1);
 	for(int i=0;i<ans1.size();i++){
-		cout<<ans1[i];
+		cout<<ans1[i]<<" ";
 	}
 	return 0;
 }
