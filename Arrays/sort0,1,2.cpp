@@ -14,11 +14,11 @@ int main(){
 			low++;
 			mid++;
 		}
-		else if(arr[mid==2]){
+		else if(arr[mid]==2){
 			swap(arr[high],arr[mid]);
 			high--;
 		}
-		else{
+		else if(arr[mid]==1){
 			mid++;
 		}
 	}
