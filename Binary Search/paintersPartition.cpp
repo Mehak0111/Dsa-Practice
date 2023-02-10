@@ -17,7 +17,7 @@ bool isPossible(int arr[],int n,int k,int mid){
 	}
 	return true;
 }
-int time(int arr[],int n,int k){
+int time1(int arr[],int n,int k){
 	int s=0;
 	int ans=-1;
 	int sum=0;
@@ -47,5 +47,5 @@ int main(){
 	for(int i=0;i<n;i++){
 		cin>>arr[i];
 	}
-	cout<<time(arr,n,k);
+	cout<<time1(arr,n,k);
 }
