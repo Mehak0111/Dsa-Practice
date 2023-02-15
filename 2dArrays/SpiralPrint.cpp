@@ -30,5 +30,12 @@ int main(){
 		}
 		endcol--;
 		
+		//print ending row
+		for(int i=endcol;i>=startcol;i--){
+		    cout<<arr[endrow][i];
+		    count++;
+		}
+		endrow--;
+		
 }
 }
