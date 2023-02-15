@@ -22,5 +22,13 @@ int main(){
 			count++;
 		}
         startrow++;
+        
+        //print ending column
+		for(int i=startrow;i<=endrow;i++){
+		    cout<<arr[i][endcol];
+		    count++;
+		}
+		endcol--;
+		
 }
 }
