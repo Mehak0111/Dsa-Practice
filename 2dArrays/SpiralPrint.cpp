@@ -37,5 +37,13 @@ int main(){
 		}
 		endrow--;
 		
+		
+		//print starting column
+		for(int i=endrow;i>=startrow;i--){
+		    cout<<arr[i][startcol];
+		    count++;
+		}
+		startcol++;
+}
 }
 }
