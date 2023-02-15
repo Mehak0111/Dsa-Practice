@@ -16,6 +16,11 @@ int main(){
 	int endrow=n-1;
 	int endcol=m-1;
 	while(count<total){
-		
+		//print starting row
+		for(int i=startcol;i<=endcol;i++){
+			cout<<arr[startrow][i]<<" ";
+			count++;
+		}
+        startrow++;
 }
 }
