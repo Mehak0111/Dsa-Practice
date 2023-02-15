@@ -25,14 +25,14 @@ int main(){
         
         //print ending column
 		for(int i=startrow;i<=endrow;i++){
-		    cout<<arr[i][endcol];
+		    cout<<arr[i][endcol]<<" ";
 		    count++;
 		}
 		endcol--;
 		
 		//print ending row
 		for(int i=endcol;i>=startcol;i--){
-		    cout<<arr[endrow][i];
+		    cout<<arr[endrow][i]<<" ";
 		    count++;
 		}
 		endrow--;
@@ -40,7 +40,7 @@ int main(){
 		
 		//print starting column
 		for(int i=endrow;i>=startrow;i--){
-		    cout<<arr[i][startcol];
+		    cout<<arr[i][startcol]<<" ";
 		    count++;
 		}
 		startcol++;
